@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    --main-white: rgb(241, 241, 241);
+    --main-color: #af0202;
+    --second-color: #e00101;
+    --third-color: #ff0606;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: none;
+}
+body{
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--main-white);
+    padding: 0;
+}
+
+body>img{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#nav{
+    width: 100%;
+    height: 5vh;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+    z-index: 1;
+}
+#nav>a{
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+#nav>a img{
+    width: 100%;
+}
+#nav ul{
+    list-style: none;
+    margin: auto;
+    width: 30%;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#nav a{
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#nav a:active{
+    font-weight: bold;
+}
+
+#nav a:hover{
+    text-shadow: var(--main-white) 0px 3px 5px;
+}
+
+/* ============================================================================================================================================================================== */
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 95vh;
+    z-index: 1;
+}
+
+main>div:first-of-type{
+    width: 50%;
+    min-width: 350px;
+    padding: 0 0 0 10%;
+    z-index: 1;
+    height: 70vh;
+    z-index: 0;
+}
+h1{
+    font-size: 5rem;
+    letter-spacing: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 10px;
+    padding-bottom: 4vh;
+    position: relative;
+}
+h1::after{
+    content: "";
+    width: 50%;
+    min-width: 100px;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+h2{
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 15px;
+    padding-bottom: 7vh;
+}
+div:first-of-type p{
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    max-width: 500px;
+    width: 90%;
+    padding-bottom: 7vh;
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 300px;
+    width: 70%;
+    z-index: 3;
+}
+
+.buttons button:first-of-type{
+    background-color: var(--main-color);
+    color: var(--main-white);
+    font-weight: 700;
+    border-color: var(--main-white) 1px solid;
+}
+.buttons button{
+    background-color: rgba(0, 0, 0, 0.30);
+    color: var(--main-white);
+    font-weight: bolder;
+    border: var(--main-color) 3px solid;
+    margin: 5px auto;
+    display: inline-block;
+}
+
+
+aside{
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    width: 50%;
+    max-width: 900px;
+    min-width: 350px;
+    height: auto;
+    margin-top: 50vh;
+    margin-bottom: 2.5vh;
+    z-index: 2;
+}
+aside article:first-of-type{
+    margin: 0;
+    margin-right: 20px;
+}
+aside article{
+    min-width: 300px;
+    margin: 0 20px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.753);
+    padding: 20px 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    color: var(--second-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+aside article img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+aside::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  aside::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  aside::-webkit-scrollbar-thumb {
+    background: var(--second-color); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  aside::-webkit-scrollbar-thumb:hover {
+    background: var(--third-color); 
+  }
+/* ============================================================================================== */
+
+.waves{
+    object-fit: cover;
+    position: absolute;
+    bottom: 0vh;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    z-index: 0;
+}
