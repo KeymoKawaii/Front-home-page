@@ -26,6 +26,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--main-white);
     padding: 0;
+    background-color: rgb(24, 24, 24);
 }
 
 body>img{
@@ -36,6 +37,12 @@ body>img{
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.fadein{
+    opacity: 0.6;
 }
 
 #nav{
@@ -157,18 +164,25 @@ div:first-of-type p{
     color: var(--main-white);
     font-weight: bolder;
     border: var(--main-color) 3px solid;
-    margin: 5px auto;
+    margin: auto;
+    margin-bottom: 10px;
     display: inline-block;
+    cursor: pointer;
+    transition: all 0.8s;
 }
 
+.buttons button:hover{
+    background-color: var(--main-white);
+    color: var(--main-color);
+}
 
 aside{
     overflow: hidden;
     overflow-x: auto;
     display: flex;
     width: 50%;
-    max-width: 900px;
-    min-width: 350px;
+    max-width: 1000px;
+    min-width: 320px;
     height: auto;
     margin-top: 50vh;
     margin-bottom: 2.5vh;
@@ -189,7 +203,13 @@ aside article{
     color: var(--second-color);
     margin-bottom: 10px;
     cursor: pointer;
+    transition: all 0.8s;
 }
+
+aside article:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+
 aside article img{
     width: 100%;
     height: 150px;
@@ -222,14 +242,55 @@ aside::-webkit-scrollbar {
 
 .waves{
     object-fit: cover;
-    position: absolute;
-    bottom: 0vh;
-    left: 0px;
+    /* position: absolute; */
+    /* bottom: 0vh;
+    left: 0px; */
     z-index: -1;
     width: 100%;
-    height: 35vh;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    z-index: 0;
+    /* display: block; */
+    margin-top: -20vh;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+}
+
+/* ========================================================================== */
+
+@media screen and (max-width: 700px) {
+    main{
+        height: auto;
+    }
+    #main{
+        margin: auto;
+        padding: 0;
+        margin-top: 8vh;
+        margin-bottom: 8vh;
+    }
+    .buttons{
+        width: 100%;
+    }
+    .button button{
+        margin: auto;
+    }
+    aside{
+        margin-top: 0vh;
+        margin-left: 30px;
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1{
+        font-size: 4rem;
+    }
+  }
+
+@keyframes backgroundimg{
+    from {
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
