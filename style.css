@@ -249,11 +249,14 @@ aside::-webkit-scrollbar {
     width: 100%;
     /* display: block; */
     margin-top: -20vh;
+    height: 100px;
+    object-position: bottom;
 }
 
 footer{
     width: 100%;
-    height: auto;
+    overflow: visible;
+    height:75px;
 }
 
 /* ========================================================================== */
